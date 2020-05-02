@@ -1,9 +1,0 @@
-# ninja log v5
-0	30	1588355711862969380	CMakeFiles/stack.dir/home/greg/Kruse_Data_Structures_and_Program_Design_in_Cplusplus/Chapter_02_Introduction_to_Stacks/Stack/stack.cpp.o	24ed3356198bea65
-30	87	1588355711919636044	libstack.a	40a396b7ad31ae20
-1	272	1588355712106302706	CMakeFiles/matcher.dir/main.cpp.o	c9d8515656aa7277
-272	334	1588355712166302704	matcher	a440145b1699c7ca
-1	27	1588356362902950190	CMakeFiles/stack.dir/home/greg/Kruse_Data_Structures_and_Program_Design_in_Cplusplus/Chapter_02_Introduction_to_Stacks/Stack/stack.cpp.o	24ed3356198bea65
-27	83	1588356362956283522	libstack.a	40a396b7ad31ae20
-1	268	1588356363142950184	CMakeFiles/matcher.dir/main.cpp.o	c9d8515656aa7277
-268	336	1588356363209616847	matcher	a440145b1699c7ca
