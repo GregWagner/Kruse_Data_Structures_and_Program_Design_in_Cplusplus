@@ -6,7 +6,8 @@ int const MAX_COL {20};
 
 class Life {
   public:
-    void instructions();
+    void static instructions();
+
     void initialize();
     void print();
     void update();

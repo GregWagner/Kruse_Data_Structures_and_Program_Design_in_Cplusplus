@@ -5,21 +5,18 @@
  * Pre:   None
  * Post:  Instructions for using the Life program have been printed
  */
-void Life::instructions()
-{
+void Life::instructions() {
   std::cout << "Welcome to Conway's Game of Life.\n"
     << "This game uses a gird of size " << MAX_ROW << " by " << MAX_COL
     << " in which each\ncell can either be occupied by an organism or not "
     << "according\nto the number of neighboring cells which are alive.\n\n";
-
 }
 
 /*
  * Pre:   None.
  * Post:  The Life object contains a configuration specified by the user
  */
-void Life::initialize()
-{
+void Life::initialize() {
   for (int row {}; row <= MAX_ROW + 1; ++row) {
     for (int col {}; col <= MAX_COL + 1; ++col) {
       grid[row][col] = 0;
@@ -48,16 +45,11 @@ void Life::initialize()
  * Pre:   THe Life object contains a configuration
  * Post:  The configuration is written for the user
  */
-void Life::print()
-{
-  std::cout << "The currnet Life configuration is:\n";
+void Life::print() {
+  std::cout << "The current Life configuration is:\n";
   for (int row {1}; row <= MAX_ROW + 1; ++row) {
     for (int col {1}; col <= MAX_COL + 1; ++col) {
-      if (grid[row][col] == 1) {
-        std::cout << '*';
-      } else {
-        std::cout << ' ';
-      }
+        std::cout << (grid[row][col] == 1 ? '*' : ' ');
     }
     std::cout << '\n';
   }
@@ -67,13 +59,12 @@ void Life::print()
  * Pre:   The Life object contains a configuration
  * Post:  THe Life object contains the next generation of configuration
  */
-void Life::update()
-{
+void Life::update() {
   int new_grid[MAX_ROW + 2][MAX_COL + 2];
   for (int row {1}; row <= MAX_ROW; ++row) {
     for (int col {1}; col <= MAX_COL; ++col) {
       switch (neighbor_count(row, col)) {
-          case 2:     // status stary the same
+          case 2:     // status stays the same
             new_grid[row][col] = grid[row][col];
             break;
           case 3:     // cell is now alive
@@ -85,6 +76,8 @@ void Life::update()
       }
     }
   }
+
+  // copy new grid back as the new configuration
   for (int row {1}; row <= MAX_ROW; ++row) {
     for (int col {1}; col <= MAX_COL; ++col) {
       grid[row][col] = new_grid[row][col];
@@ -97,8 +90,7 @@ void Life::update()
  *        row and col define a cell inside its hedge.
  * Post:  The number of living neighbos of the specified cell is returned.
  */
-int Life::neighbor_count(int row, int col)
-{
+int Life::neighbor_count(int row, int col) {
   int count {};
   for (int i {row - 1}; i <= row + 1; ++i) {
     for (int j {col - 1}; j <= col + 1; ++j) {
@@ -112,8 +104,7 @@ int Life::neighbor_count(int row, int col)
   return count;
 }
 
-void Life::test_neighbor_count()
-{
+void Life::test_neighbor_count() {
   for (int row {1}; row <= MAX_ROW; ++row) {
     for (int col {1}; col <= MAX_COL; ++col) {
       std::cout << neighbor_count(row, col) << ' ';

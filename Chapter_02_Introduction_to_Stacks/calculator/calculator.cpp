@@ -1,24 +1,20 @@
-#include "../Stack/stack.hpp"
+#include "../stack/stack.hpp"
 #include <iostream>
 
-void introduction()
-{
-
+void introduction() {
 }
 
-void instructions()
-{
-
+void instructions() {
 }
 
-char get_command()
-{
+char get_command() {
   char command {};
-  std::cout << "Select command and press <Enter>:";
 
   bool waiting {true};
   while (waiting) {
+      std::cout << "Select command and press <Enter>: ";
     std::cin >> command;
+    command = tolower(command);
     switch (command) {
       case '?':
       case '=':
@@ -46,9 +42,10 @@ char get_command()
  *        true is returned unless the command indicates to quit.
  * Uses:  The class Stack
  */
-bool do_command(char command, Stack &numbers)
-{
-  double p {}, q {};
+bool do_command(char command, Stack &numbers) {
+  double p {};
+  double q {};
+  bool finished {};
   switch (command) {
     case '?':
       std::cout << "Enter a real number: ";
@@ -82,9 +79,10 @@ bool do_command(char command, Stack &numbers)
       break;
     case 'q':
       std::cout << "Calculation finished.\n";
-      return false;
+      finished = true;
+      break;
   }
-  return true;
+  return finished;
 }
 
 /*
@@ -98,7 +96,6 @@ int main()
   Stack stored_numbers;
   introduction();
   instructions();
-
-  while (do_command(get_command(), stored_numbers));
-
+  while (do_command(get_command(), stored_numbers)) {
+  };
 }

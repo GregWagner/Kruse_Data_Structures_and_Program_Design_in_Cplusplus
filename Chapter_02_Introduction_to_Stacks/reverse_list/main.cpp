@@ -6,8 +6,7 @@
  * Post:  The numbers are printed in reverse order
  * Uses:  The STL class stack and its methods
  */
-int main()
-{
+int main() {
   std::stack<double> numbers;
 
   int n {};

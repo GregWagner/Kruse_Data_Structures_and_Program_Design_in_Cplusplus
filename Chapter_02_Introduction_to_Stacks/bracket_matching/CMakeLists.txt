@@ -4,8 +4,8 @@ project(matcher LANGUAGES CXX)
 
 add_library(stack
   STATIC
-    ../Stack/stack.hpp
-    ../Stack/stack.cpp
+    ../stack/stack.hpp
+    ../stack/stack.cpp
   )
 
 add_executable(matcher main.cpp)

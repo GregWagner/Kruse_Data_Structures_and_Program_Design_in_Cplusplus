@@ -3,8 +3,7 @@
 
 #include <iostream>
 
-bool user_says_yes()
-{
+bool user_says_yes() {
   int c {};
   bool initial_response {true};
   do {

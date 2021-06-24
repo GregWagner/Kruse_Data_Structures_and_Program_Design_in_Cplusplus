@@ -1,3 +1,7 @@
+/*
+ * Stack implemented using contingous memory (i.e. an array)
+ */
+
 #ifndef STACK_H
 #define STACK_H
 

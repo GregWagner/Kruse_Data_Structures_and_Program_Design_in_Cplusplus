@@ -1,7 +1,5 @@
 ---
-Checks:          '*,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*'
-WarningsAsErrors: '1'
-HeaderFilterRegex: ''
-FormatStyle:     none
-
-
+Checks: "*,-llvmlibc-callee-namespace,-llvmlibc-restrict-system-libc-headers,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*"
+WarningsAsErrors: "1"
+HeaderFilterRegex: ""
+FormatStyle: none

@@ -4,8 +4,8 @@ project(calculator LANGUAGES CXX)
 
 add_library(stack
   STATIC
-    ../Stack/stack.hpp
-    ../Stack/stack.cpp
+    ../stack/stack.hpp
+    ../stack/stack.cpp
   )
 
 add_executable(calculator calculator.cpp)

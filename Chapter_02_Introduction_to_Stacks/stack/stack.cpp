@@ -4,8 +4,7 @@
  * Pre:   None
  * Post:  The Stack exists and it intialied to be empty
  */
-Stack::Stack() : count {}
-{
+Stack::Stack() : count {} {
 }
 
 /*
@@ -65,5 +64,5 @@ Error_code Stack::top(Stack_entry &item) const
  */
 bool Stack::empty() const
 {
-  return count == 0;;
+  return count == 0;
 }

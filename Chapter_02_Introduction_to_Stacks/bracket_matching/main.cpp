@@ -1,13 +1,12 @@
 #include <iostream>
-#include "../Stack/stack.hpp"
+#include "../stack/stack.hpp"
 
 /*
  * Post:  The program has notified the user of any bracket mismatch in the 
  *        standard input file.
  * Usess: The class Stack
  */
-int main()
-{
+int main() {
 
   Stack openings;
   char symbol {};
@@ -21,13 +20,13 @@ int main()
           << " detected.\n";
         is_matched = false;
       } else {
-        char match;
+        char match {};
         openings.top(match);
         openings.pop();
-        is_matched =  (symbol == '}' && match == '{') ||
+        is_matched = (symbol == '}' && match == '{') ||
           (symbol == ')' && match == '(') ||
           (symbol == ']' && match == '[');
-        if (is_matched) {
+        if (!is_matched) {
           std::cout << "Bad match " << match << symbol << '\n';
         }
       }
